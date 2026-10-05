@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <link href="./output.css" rel="stylesheet">
+  <title>IP Address Tracker</title>
+</head>
+
+<body class="bg-myGray-400">
+  <div class="w-full">
+    <header class="max-md:bg-mobile md:bg-desktop bg-center flex flex-col items-center py-6 h-64 md:h-80 max-sm:px-7">
+      <h1 class="text-white text-3xl mb-10">IP Address Tracker</h1>
+      <div class="flex w-full max-w-md bg-white rounded-xl overflow-hidden shadow-lg">
+        <input type="text" aria-label="Search for any IP address or domain" placeholder="Search for any IP address or domain" id="search-input" 
+          class="w-full py-3 px-4 outline-none text-sm cursor-pointer">
+        <button type="button" id="btn" aria-label="Submit search" class="bg-black text-white px-6 hover:bg-myGray-950 transition-colors cursor-pointer">
+          &gt;
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-sm:px-10">
+        <div id="display-container" aria-live="polite" class="mx-auto max-w-5xl bg-white rounded-xl shadow-lg h-72 -mt-22 relative z-50 md:h-36"></div>
+      </section>
+
+      <section>
+      <div id="map" class="h-[calc(100vh-16rem)] relative z-0 -mt-50 md:-mt-24"></div>
+      </section>
+    </main>
+
+  </div>
+  <script src="/script.js"></script>
+</body>
+
+</html>

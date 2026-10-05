@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-myGray-950: hsl(0, 0%, 17%);
+    --color-myGray-400: hsl(0, 0%, 58%);
+}
+
+@utility bg-mobile {
+  background-image: url('../images/pattern-bg-mobile.png');
+}
+
+@utility bg-desktop {
+  background-image: url('../images/pattern-bg-desktop.png');
+}
+
+@layer base {
+    body {
+        font-family: "Rubik", sans-serif;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+    }
+}
