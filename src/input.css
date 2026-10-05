@@ -7,11 +7,11 @@
 }
 
 @utility bg-mobile {
-  background-image: url('../images/pattern-bg-mobile.png');
+  background-image: url('images/pattern-bg-mobile.png');
 }
 
 @utility bg-desktop {
-  background-image: url('../images/pattern-bg-desktop.png');
+  background-image: url('images/pattern-bg-desktop.png');
 }
 
 @layer base {
