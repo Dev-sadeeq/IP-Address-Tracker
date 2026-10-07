@@ -21,6 +21,7 @@
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-light: 300;
+    --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --radius-xl: 0.75rem;
     --default-transition-duration: 150ms;
@@ -207,9 +208,6 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
   .h-64 {
     height: calc(var(--spacing) * 64);
   }
@@ -218,6 +216,9 @@
   }
   .h-\[calc\(100vh-16rem\)\] {
     height: calc(100vh - 16rem);
+  }
+  .h-full {
+    height: 100%;
   }
   .w-full {
     width: 100%;
@@ -228,20 +229,17 @@
   .max-w-md {
     max-width: var(--container-md);
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
   }
   .items-center {
     align-items: center;
+  }
+  .justify-center {
+    justify-content: center;
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
@@ -261,30 +259,23 @@
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .bg-black {
     background-color: var(--color-black);
-  }
-  .bg-myGray-400 {
-    background-color: var(--color-myGray-400);
-  }
-  .bg-red-500 {
-    background-color: var(--color-red-500);
   }
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-desktop {
-    background-image: url('images/pattern-bg-desktop.png');
-  }
   .bg-mobile {
     background-image: url('images/pattern-bg-mobile.png');
   }
+  .bg-cover {
+    background-size: cover;
+  }
   .bg-center {
     background-position: center;
+  }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
@@ -319,6 +310,10 @@
     --tw-font-weight: var(--font-weight-light);
     font-weight: var(--font-weight-light);
   }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
@@ -326,19 +321,15 @@
   .text-myGray-400 {
     color: var(--color-myGray-400);
   }
+  .text-red-500 {
+    color: var(--color-red-500);
+  }
   .text-white {
     color: var(--color-white);
-  }
-  .underline {
-    text-decoration-line: underline;
   }
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .transition-colors {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
@@ -349,14 +340,19 @@
     --tw-outline-style: none;
     outline-style: none;
   }
+  .focus-within\:outline-2:focus-within {
+    outline-style: var(--tw-outline-style);
+    outline-width: 2px;
+  }
+  .focus-within\:outline-offset-2:focus-within {
+    outline-offset: 2px;
+  }
+  .focus-within\:outline-white:focus-within {
+    outline-color: var(--color-white);
+  }
   @media (hover: hover) {
     .hover\:bg-myGray-950:hover {
       background-color: var(--color-myGray-950);
-    }
-  }
-  @media (width < 48rem) {
-    .max-md\:bg-mobile {
-      background-image: url('images/pattern-bg-mobile.png');
     }
   }
   @media (width < 40rem) {
@@ -368,17 +364,8 @@
     }
   }
   @media (width >= 48rem) {
-    .md\:-mt-2 {
-      margin-top: calc(var(--spacing) * -2);
-    }
     .md\:-mt-24 {
       margin-top: calc(var(--spacing) * -24);
-    }
-    .md\:-mt-28 {
-      margin-top: calc(var(--spacing) * -28);
-    }
-    .md\:-mt-32 {
-      margin-top: calc(var(--spacing) * -32);
     }
     .md\:h-36 {
       height: calc(var(--spacing) * 36);
@@ -400,9 +387,6 @@
     }
     .md\:bg-desktop {
       background-image: url('images/pattern-bg-desktop.png');
-    }
-    .md\:bg-mobile {
-      background-image: url('images/pattern-bg-mobile.png');
     }
     .md\:px-8 {
       padding-inline: calc(var(--spacing) * 8);

@@ -2,8 +2,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-myGray-950: hsl(0, 0%, 17%);
-  --color-myGray-400: hsl(0, 0%, 58%);
+    --color-myGray-950: hsl(0, 0%, 17%);
+    --color-myGray-400: hsl(0, 0%, 58%);
 }
 
 @utility bg-mobile {
@@ -15,30 +15,11 @@
 }
 
 @layer base {
-  body {
-    font-family: "Rubik", sans-serif;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-  }
+    body {
+        font-family: "Rubik", sans-serif;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+    }
 }
 
-@media (orientation: landscape) and (max-width: 900px) {
-
-  header {
-    height: 13rem;
-  }
-
-  .adjust {
-    margin-top: -35px;
-  }
-
-  #display-container {
-    height: 6rem;
-  }
-
-  #map {
-    height: 100vh;
-    margin-top: -2.5rem;
-  }
-}
